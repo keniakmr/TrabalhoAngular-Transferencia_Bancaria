@@ -1,0 +1,30 @@
+<h3 class="text-center">Relatório de Transferências Bancárias</h3>
+
+<div class="col-lg-10" style="text-align: right;">
+  <button routerLink = "/add" type="button" class = "btn btn-outline-success mb-3"> Cadastro de Transferências</button>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nome do Cliente</th>
+      <th scope="col">Valor na Conta</th>
+      <th scope="col">Número da Conta</th>
+      <th scope="col">Editar</th>
+      <th scope="col">Excluir</th>
+    </tr>
+  </thead>
+    <tbody>
+     <tr *ngFor = "let item of ListarContas">
+      <th>{{item.id_transferencia}}</th>
+      <td>{{item.nomeCliente}}</td>
+      <td>{{item.valor | currency : 'BRL'}}</td>
+      <td>{{item.contaCliente}}</td>
+      <td><button (click)='editar(item.id_transferencia)' type= "button" class="btn btn-success">Editar</button></td>
+      <td><button (click)='excluir(item.id_transferencia)' type= "button" class="btn btn-secondary ">Excluir</button></td>
+     </tr>
+   </tbody>
+</table>
+
+

@@ -1,0 +1,24 @@
+<div class="container" >
+  <div class="form-group d-flex justify-content-center">
+    <div class="col-md-6">
+      <h3 class="text-center">Alterações Bancárias</h3>
+        <form>
+            <div class="my-3">
+                <label class="form-label">Nome do Cliente </label>
+                <input [(ngModel)]="contas.nomeCliente" type="text" class="form-control" name="nomeCliente">
+            </div>
+            <div class="my-3">
+                <label class="form-label">Valor</label>
+                <input [(ngModel)]="contas.valor" type="number" class="form-control" name="valor">
+            </div>
+            <div class="my-3">
+              <label class="form-label">Número da Conta</label>
+              <input [(ngModel)]="contas.contaCliente" type="text" class="form-control" name="contaCliente">
+          </div>
+            <div class="my-3 text-end">
+                <button (click)='modificar()' class="btn btn-success">Alterar</button>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
